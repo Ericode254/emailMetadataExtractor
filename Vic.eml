@@ -1,0 +1,89 @@
+Delivered-To: jilloerick6@gmail.com
+Received: by 2002:a05:7010:3894:b0:3f6:dd71:ebdc with SMTP id x20csp1059675mdm;
+        Mon, 12 Aug 2024 00:54:23 -0700 (PDT)
+X-Received: by 2002:a05:6512:3f23:b0:52e:f9f1:c132 with SMTP id 2adb3069b0e04-530ef5212c9mr2436083e87.4.1723449263387;
+        Mon, 12 Aug 2024 00:54:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1723449263; cv=none;
+        d=google.com; s=arc-20160816;
+        b=OflbGslw23yy7A2ujJzpyLgOYjzJXaIrHT/yFJu+m/hRB9+YYEgNa2CRhasrCoLNbj
+         olM+WEpGLyIxCUiP2LjzlnPZAoF03L7do5iW3IiMgpWriEcwECEd7WWUkwbjwlre+Nao
+         JYTSsDL2ikKnYEpQ/zODrKWprd7jmD8QcWqj+H4gdT7LBbdex9qdT5MNsmkeADPGiEXo
+         eql2FMaPgDd9ekAS1Fi7coSrEv3T54L7OCNWIv7iYEgFGeJOnNx0yF6RdcLYqOPV2213
+         Ihrf00ELxDyq5oG03o0tYyfBkkYVOUwYbh9/XdjdS6BOnVmgnUGSmaB88XEbjD6p1OER
+         mklA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=UAf/ooWTDpna4Stp4boRVbNaQh1PsUBu6UMEwRHJXFk=;
+        fh=r8zjDzl5LOgeD41/Hed63B1FTdWHRminieGkpmfpJEQ=;
+        b=yc9+UamagFnsv5OVo1s+f6RTcH/5u9rKFWVBUfSznuLrFA+t3KMTtd4Tzk7x8EVVqy
+         XjQnWK08NR4lGzp27oJkD7T08am2nONkUo62ApFavbPlNv/hiknQlWgUdYSlNvWedwIs
+         A/B0yZ7vCvuGHwwOjlVwj3bdet5vLBnv098da+YnqoHnNAircd2Oq4BAPP4Euao4eDnN
+         hjQ2+sE+yrym5pcmK0d9KeS71S4bDSgBBaxYF0GCDeYrLd/iTse0A6GRUZU35p4Io9H3
+         3JCAq+tZ7/JllNpruyqC3IdpB5E4Ghnhz+8StLpbnObaY7hswhomkO2Gm8mwAuCpzSMR
+         vtDg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WpMfsOUL;
+       spf=pass (google.com: domain of victorcodes9532@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=victorcodes9532@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <victorcodes9532@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 2adb3069b0e04-530e6dad094sor1053464e87.12.2024.08.12.00.54.23
+        for <jilloerick6@gmail.com>
+        (Google Transport Security);
+        Mon, 12 Aug 2024 00:54:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of victorcodes9532@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=WpMfsOUL;
+       spf=pass (google.com: domain of victorcodes9532@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=victorcodes9532@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1723449262; x=1724054062; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=UAf/ooWTDpna4Stp4boRVbNaQh1PsUBu6UMEwRHJXFk=;
+        b=WpMfsOULZ5HRPcaIZcuEpbfjPb3z4B83Si5n+sfBDwFiFQ5wn+W4jaCPlxSO8eXSZL
+         snZuqFZL1pSXUKHF/NHrvZ6swBzlfIujRsxjHfzn9YGBa1rbNcgbMwvj9IxI1WpX4th7
+         2AMt3RGnJuj4pvWFHBM5pKyxyZIVMnvEO7JjZLzBfDzyYG1nx/trMd22UoDmQJE7tfK2
+         QGmAmwiFW/73N2pJxahZLx7x+OaktYmpppB5lI6+QFXGfgf3U55ajxBV/GJZUL7k+bRM
+         dKzPTqm7eIz4ZQnxIwVzXMUqTLzrAfDuACw02iOt4Qv8BRLrP3keisKDP2aVfW0PphrN
+         +SDA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1723449262; x=1724054062;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=UAf/ooWTDpna4Stp4boRVbNaQh1PsUBu6UMEwRHJXFk=;
+        b=tHSg5Aw5WwlpuSqMGEex4saHQy/lznrgMy0xRfXxel2fqwfqkevjm07mRgzgnijK1l
+         tXG8Xg84Jhv726To7ik3kMx+rfUB87cEysZ50DL0FDvqZuimrWGwuMDgiL91XuAAjG+P
+         xUmLQCpS8VH5ZU0NNv3caqaFos6OiXYrcv7P36VkZ4q29SLfvBkvw7Ic57Uq8VYDlcQD
+         +ujIVcw9bY5AeHyGtFUjk+J3mMFfERiMelX//+JilcOPBmJ8+18XVfu38fp2UVNg30vE
+         4GoAPeHYoH7jCjZsn9OwLqE+PDlzfxpOB1ddMeamK6zVd1FBBIA0Lehh7RLcSxHA8OHP
+         GP3w==
+X-Gm-Message-State: AOJu0Yyu8wCdal3wFy6RXvH0UTjJ1NRsJJPOaKjhuy/SswQbva+f+AAL
+	6USpwsXyr1fxoL1IwvtOp4SCFtjIqVLSxM6fxsYGrX+mgdw2qZbuWZNuadcLBdPRql91Iv4zfG1
+	1F8OPysIqPXxFmXYuQ7FM5wrrflFYgmApVgY=
+X-Google-Smtp-Source: AGHT+IHkn3xqpdhRI/On2vj+TdwtDuYO40CI38gFwiajFmfbegty6u1bKu2SZSr9vYA1XYntlLiiJ+PelXlfk3e9F+4=
+X-Received: by 2002:a05:6512:2250:b0:52f:2c3:50be with SMTP id
+ 2adb3069b0e04-530e5dc696fmr2926712e87.20.1723449262131; Mon, 12 Aug 2024
+ 00:54:22 -0700 (PDT)
+MIME-Version: 1.0
+From: Victor Kimathi <victorcodes9532@gmail.com>
+Date: Mon, 12 Aug 2024 10:54:10 +0300
+Message-ID: <CAM33dkhNFjBG02E+PfLH2bxAvFc_JyHzgHsU0W4R7f_Ki7wrmw@mail.gmail.com>
+Subject: Vic
+To: Erick Jillo <jilloerick6@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000000ed2ac061f77cdea"
+
+--0000000000000ed2ac061f77cdea
+Content-Type: text/plain; charset="UTF-8"
+
+https://meet.google.com/yfs-nypu-ccw
+
+--0000000000000ed2ac061f77cdea
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr"><a href="https://meet.google.com/yfs-nypu-ccw">https://meet.google.com/yfs-nypu-ccw</a></div>
+
+--0000000000000ed2ac061f77cdea--
